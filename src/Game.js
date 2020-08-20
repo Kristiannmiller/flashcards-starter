@@ -9,7 +9,7 @@ class Game {
     this.currentRound = {};
   }
   start() {
-    const currentDeck = new Deck(data)
+    const currentDeck = new Deck(prototypeQuestions)
     this.currentRound = new Round(currentDeck)
     this.printMessage(currentDeck, this.currentRound)
     this.printQuestion(this.currentRound)
