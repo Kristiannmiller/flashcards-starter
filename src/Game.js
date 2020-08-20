@@ -11,6 +11,8 @@ class Game {
   start() {
     const currentDeck = new Deck(data)
     this.currentRound = new Round(currentDeck)
+    this.printMessage(currentDeck, this.currentRound)
+    this.printQuestion(this.currentRound)
   }
 
   printMessage(deck, round) {
