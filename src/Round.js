@@ -15,10 +15,13 @@ class Round {
     this.currentTurn = currentTurn
     currentTurn.evaluateGuess()
     if(!currentTurn.result) {
-      this.incorrectGuesses.push(currentTurn.returnCard().id)
+      this.incorrectGuesses.push(this.returnCurrentCard().id)
     }
     this.turns++
     return currentTurn.giveFeedback()
+  }
+  calculatePercentCorrect() {
+    return this.incorrectGuesses.length / this.deck.cards.length * 100
   }
 };
 module.exports = Round;
