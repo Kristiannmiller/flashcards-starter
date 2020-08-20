@@ -23,5 +23,6 @@ class Round {
   calculatePercentCorrect() {
     return this.incorrectGuesses.length / this.deck.cards.length * 100
   }
+  
 };
 module.exports = Round;
