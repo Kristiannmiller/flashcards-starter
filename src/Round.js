@@ -24,7 +24,7 @@ class Round {
     return this.incorrectGuesses.length / this.deck.cards.length * 100
   }
   endRound() {
-    return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
+    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`)
   }
 };
 module.exports = Round;
