@@ -1,15 +1,16 @@
 const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
+const Deck = require('../src/Deck');
+const Round = require('../src/Round');
 
 class Game {
   constructor() {
     this.currentRound = {};
   }
   start() {
-    //need to build a deck using the information in data.js
-    //need to intatiate a round using the deck we just created
-    //need to assign this.currentRound to the new round
+    const currentDeck = new Deck(data)
+    this.currentRound = new Round(currentDeck)
   }
 
   printMessage(deck, round) {
